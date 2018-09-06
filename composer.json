@@ -2,7 +2,7 @@
     "name": "vortex/geoip",
     "description": "Vortex GeoIP restriction module enables the website owner to restrict the website for specific countries or IP addresses.",
     "type": "magento2-module",
-    "version": "1.0.0",
+    "version": "1.0.1",
   "license": [
     "GPL-3.0"
   ],
@@ -28,7 +28,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Vortex\\GeoIP\\": ""
+            "Vortex\\GeoIP\\":""
         }
     }
 }
