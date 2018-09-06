@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Module/etc/module.xsd">
-    <module name="Vortex_Geoip" setup_version="1.0.0"></module>
+    <module name="Vortex_Geoip" setup_version="2.0.0"></module>
         <sequence>
             <module name="Magento_Backend"/>
              <module name="Magento_Sales"/>
