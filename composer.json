@@ -20,7 +20,7 @@
             ]
         ]
     },
-     "minimum-stability": "stable",
+   "minimum-stability": "dev",
     "keywords": ["Geo Lock", "Geo Location", "Geo Restriction", "IP block"],
     "homepage": "https://vortexglobalservices.com/",
     "autoload": {
