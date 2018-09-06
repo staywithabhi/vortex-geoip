@@ -12,6 +12,13 @@
             "role": "Developer"
         }
     ],
+    "repositories": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/staywithabhi/vortex-geoip"
+        }
+      ],
+      "minimum-stability": "dev",
     "keywords": ["Geo Lock", "Geo Location", "Geo Restriction", "IP block"],
     "homepage": "https://vortexglobalservices.com/",
     "autoload": {
