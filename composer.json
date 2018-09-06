@@ -12,6 +12,15 @@
             "role": "Developer"
         }
     ],
+        "extra": {
+        "map": [
+            [
+                "*",
+                "Vortex/GeoIP/"
+            ]
+        ]
+    },
+     "minimum-stability": "stable",
     "keywords": ["Geo Lock", "Geo Location", "Geo Restriction", "IP block"],
     "homepage": "https://vortexglobalservices.com/",
     "autoload": {
