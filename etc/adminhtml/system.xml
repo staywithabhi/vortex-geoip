@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <tab id="vortex" translate="label" sortOrder="10">
+            <label>Vortex</label>
+        </tab>
+        <section id="vortex_geoip" translate="label" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Vortex Geo Restriction</label>
+            <tab>vortex</tab>
+            <resource>Vortex_GeoIP::configuration</resource>
+           <group id="geoip_config" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>GeoIP Restriction Configuration</label>
+                <field id="activate_geoip" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field> 
+                <field id="rule_type" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                       <depends>
+                        <field id="activate_geoip">1</field>
+                    </depends>
+                    <label>Access Rule for Countries</label>
+                    <source_model>Vortex\GeoIP\Model\RetrcictionType</source_model>
+                </field>
+                <field id="countries" translate="label comment" type="multiselect" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <depends>
+                        <field id="activate_geoip">1</field>
+                    </depends>
+                    <label>Countries</label>
+                    <source_model>\Magento\Directory\Model\Config\Source\Country</source_model>
+                     <comment><![CDATA[<a href="http://www.geoplugin.com/geolocation/" target="_new">IP Geolocation</a> by <a href="http://www.geoplugin.com/" target="_new">geoPlugin</a>
+]]></comment>
+                </field>
+            </group>
+            <group id="geo_restrict_range" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Restrict Geo Location By IP Range</label>
+                <field id="active_range" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="blacklisted" translate="label comment" type="textarea" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                       <depends>
+                        <field id="active_range">1</field>
+                    </depends>
+                    <label>Black Listed IPs</label>
+                    <comment><![CDATA[<b>Example:</b><br/>xxx.xxx.xxx.xxx<br/>xxx.xxx.*.*]]></comment>
+                </field>
+                <field id="whitelisted" translate="label comment" type="textarea" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                   <depends>
+                        <field id="active_range">1</field>
+                    </depends>
+                    <label>White Listed IPs</label>
+                    <comment><![CDATA[<b>Example:</b><br/>xxx.xxx.xxx.xxx<br/>xxx.xxx.*.*]]></comment>
+                </field>
+            </group>
+        </section>
+      </system>
+</config>
