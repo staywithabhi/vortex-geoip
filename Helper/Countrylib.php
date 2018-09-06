@@ -1,6 +1,6 @@
 <?php
 
-namespace Vortex\GeoIP\Helper;
+namespace Vortex\Geoip\Helper;
 
 class Countrylib extends \Magento\Framework\App\Helper\AbstractHelper
 {

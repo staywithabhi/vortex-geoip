@@ -1,6 +1,6 @@
 <?php
 
-namespace Vortex\GeoIP\Helper;
+namespace Vortex\Geoip\Helper;
 
 use Magento\Store\Model\ScopeInterface;
 

@@ -8,9 +8,9 @@
             <class>separator-top</class>
             <label>Vortex Geo Restriction</label>
             <tab>vortex</tab>
-            <resource>Vortex_GeoIP::configuration</resource>
+            <resource>Vortex_Geoip::configuration</resource>
            <group id="geoip_config" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>GeoIP Restriction Configuration</label>
+                <label>Geoip Restriction Configuration</label>
                 <field id="activate_geoip" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enabled</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
@@ -20,7 +20,7 @@
                         <field id="activate_geoip">1</field>
                     </depends>
                     <label>Access Rule for Countries</label>
-                    <source_model>Vortex\GeoIP\Model\RetrcictionType</source_model>
+                    <source_model>Vortex\Geoip\Model\RetrcictionType</source_model>
                 </field>
                 <field id="countries" translate="label comment" type="multiselect" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <depends>

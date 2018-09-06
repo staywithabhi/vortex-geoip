@@ -1,5 +1,5 @@
 <?php
-namespace Vortex\GeoIP\Model;
+namespace Vortex\Geoip\Model;
 use Magento\Framework\Option\ArrayInterface;
 class RetrcictionType implements ArrayInterface
 {

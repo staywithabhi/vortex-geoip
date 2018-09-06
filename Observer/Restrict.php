@@ -1,7 +1,7 @@
 <?php
-namespace Vortex\GeoIP\Observer;
+namespace Vortex\Geoip\Observer;
 use Magento\Framework\Event\ObserverInterface;
-use Vortex\GeoIP\Model\RetrcictionType;
+use Vortex\Geoip\Model\RetrcictionType;
 class Restrict implements ObserverInterface
 {
     protected $helper;
@@ -13,8 +13,8 @@ class Restrict implements ObserverInterface
     const XML_PATH_VORTEX_RESTRICTION_RULE  = 'vortex_geoip/geoip_config/rule_type';
     const XML_PATH_VORTEX_GEOIP_COUNTRIES  = 'vortex_geoip/geoip_config/countries';
     public function __construct(
-        \Vortex\GeoIP\Helper\Data $helper,
-         \Vortex\GeoIP\Helper\Countrylib $countryhelper,
+        \Vortex\Geoip\Helper\Data $helper,
+         \Vortex\Geoip\Helper\Countrylib $countryhelper,
         \Magento\Framework\App\RequestInterface $request,
          \Psr\Log\LoggerInterface $logger,
          \Magento\Framework\App\Response\RedirectInterface $redirect,
